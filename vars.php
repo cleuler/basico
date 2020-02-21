@@ -52,4 +52,20 @@ $d->nome = 'Joana'; // define um mesmo atributo com outro valor
 print $c->nome;     // resultado = Joana
 echo " ";           // espaço
 print $d->nome;     // resultado = Joana
+nl(2);
+
+/* cria um array do tipo string com 4 posições */
+$carros = array('Palio', 'Gol', 'Fiesta', 'Corsa');
+echo $carros[1]; // resultado = Gol,pois a primeira posição de um array é indexada com zero
+nl(2);
+
+/**
+ * 1.4.5 Tipo objeto
+ */
+print "Um objeto é uma entidade com um determinado comprtamento definido por seus métodos (suas ações) e por suas propriedades (seus dados).";
+nl();
+print "Para criar um objeto utiliza-se o operador new.";
+nl();
+print "Neste exemplo cria-se um objeto plano (stdClass).";
+nl();
 
