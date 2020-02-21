@@ -45,4 +45,11 @@ nl(2);
 
 echo "Objetos - são sempre copiados por referência";
 nl();
-$c = 
+$c = new stdClass;  // cria um objeto
+$c->nome = 'Maria'; // define um atributo
+$d = $c;            // cria uma réplica do objeto
+$d->nome = 'Joana'; // define um mesmo atributo com outro valor
+print $c->nome;     // resultado = Joana
+echo " ";           // espaço
+print $d->nome;     // resultado = Joana
+
