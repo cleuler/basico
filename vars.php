@@ -66,6 +66,16 @@ print "Um objeto é uma entidade com um determinado comprtamento definido por se
 nl();
 print "Para criar um objeto utiliza-se o operador new.";
 nl();
-print "Neste exemplo cria-se um objeto plano (stdClass).";
+print "Neste exemplo cria-se um objeto plano (stdClass). E atribui-se algumas propriedades a ele:";
 nl();
+$carro = new stdClass;
+$carro->modelo = 'Palio';
+$carro->ano    = 2002;
+$carro->cor    = 'Azul';
+print_r($carro);
+nl();
+print $carro->modelo . ' ';
+print $carro->ano    . ' ';
+print $carro->cor    . ' ';
+nl(2);
 
