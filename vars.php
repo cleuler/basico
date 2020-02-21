@@ -33,5 +33,16 @@ $variavel = 'nome';
 $$variavel = 'Maria'; // === $nome = 'Maria';
 // exibe o conteúdo da variável $nome na tela
 echo $nome; // resultado = Maria
+nl(2);
 
+echo "& - operador que cria referência entre variáveis: entrelaçamento de dois nomes de variáveis diferentes com o mesmo apontador de endereço de memória";
+nl();
+$a = 5;
+$b = &$a;
+$b = 10;
+echo "a = $a" . " entrelaçada com " . "b = $b";
+nl(2);
 
+echo "Objetos - são sempre copiados por referência";
+nl();
+$c = 
