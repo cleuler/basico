@@ -27,4 +27,6 @@ function nl($n = 1): void {      // para pular n linhas na saída (web display)
     return;
 }
 nl(2);
-print_r(calcula_imc(79  , 1.77));
+$peso   = 79;   // Kg
+$altura = 1.77; // m
+print_r("IMC(peso = $peso kg, altura = $altura m) = " . calcula_imc($peso  , $altura)) . " Kg/m2";
