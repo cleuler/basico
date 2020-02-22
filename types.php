@@ -13,7 +13,7 @@ var_dump($a, $b);
 
 function calcula_imc(float $peso, float $altura): float {
     var_dump($peso, $altura);
-    return $peso / ($altura * $altura);
+    return round($peso / ($altura * $altura), 2);
 }
 
 var_dump(calcula_imc('75.1', 2));
@@ -29,4 +29,4 @@ function nl($n = 1): void {      // para pular n linhas na saída (web display)
 nl(2);
 $peso   = 79;   // Kg
 $altura = 1.77; // m
-print_r("IMC(peso = $peso kg, altura = $altura m) = " . calcula_imc($peso  , $altura)) . " Kg/m2";
+print_r("IMC(peso = $peso kg, altura = $altura m) = " . calcula_imc($peso  , $altura) . " Kg/m2");
