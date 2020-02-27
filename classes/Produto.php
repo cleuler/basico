@@ -8,6 +8,7 @@ class Produto
     private $fabricante;
     private $caracteristicas;
 
+
     public function aumentarEstoque($unidades)
     {
         if (is_numeric($unidades) AND $unidades >= 0) {
@@ -25,7 +26,7 @@ class Produto
     public function reajustarPreco($percentual)
     {
         if (is_numeric($percentual) AND $percentual >= 0) {
-            $this->preco *= (1 + ($percentual/100));
+            $this->preco *= (1 + ($percentual / 100));
         }
     }
 
@@ -34,8 +35,14 @@ class Produto
         $this->descricao = $descricao;
         $this->estoque = $estoque;
         $this->preco = $preco;
+        print "CONSTRUÍDO: Objeto {$this->descricao}, estoque {$this->estoque}, preço {$this->preco}<br>\n";
     }
 
+    public function __destruct()
+    {
+        // Implement __destruct() method.
+        print "DESTRUÍDO: Objeto {$this->descricao}, estoque {$this->estoque}, preço {$this->preco}<br>\n";
+    }
 
     public function addCaracteristica($nome, $valor)
     {
