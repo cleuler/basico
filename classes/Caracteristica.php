@@ -4,10 +4,18 @@
 class Caracteristica {
     private $nome;
     private $valor;
-    public function __construct() {
-    $this->nome  = $nome;
-    $this->valor = $valor;
+
+    /**
+     * Caracteristica constructor.
+     * @param $nome
+     * @param $valor
+     */
+    public function __construct($nome, $valor)
+    {
+        $this->nome = $nome;
+        $this->valor = $valor;
     }
+
     /**
      * @return mixed
      */
@@ -17,10 +25,28 @@ class Caracteristica {
     }
 
     /**
+     * @param mixed $nome
+     */
+    public function setNome($nome): void
+    {
+        $this->nome = $nome;
+    }
+
+    /**
      * @return mixed
      */
     public function getValor()
     {
         return $this->valor;
     }
+
+    /**
+     * @param mixed $valor
+     */
+    public function setValor($valor): void
+    {
+        $this->valor = $valor;
+    }
+
+
 }

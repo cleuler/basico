@@ -13,6 +13,11 @@ class Produto {
         $this->preco     = $preco;
     }
 
+
+    public function addCaracteristica($nome, $valor) {
+        $this->caracteristicas[] = new Caracteristica($nome, $valor);
+    }
+
     /**
      * @return mixed
      */
@@ -22,11 +27,43 @@ class Produto {
     }
 
     /**
-     * @param mixed $fabricante
+     * @param mixed $descricao
      */
-    public function setFabricante(Fabricante $f): void
+    public function setDescricao($descricao): void
     {
-        $this->fabricante = $f;
+        $this->descricao = $descricao;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEstoque()
+    {
+        return $this->estoque;
+    }
+
+    /**
+     * @param mixed $estoque
+     */
+    public function setEstoque($estoque): void
+    {
+        $this->estoque = $estoque;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPreco()
+    {
+        return $this->preco;
+    }
+
+    /**
+     * @param mixed $preco
+     */
+    public function setPreco($preco): void
+    {
+        $this->preco = $preco;
     }
 
     /**
@@ -36,8 +73,13 @@ class Produto {
     {
         return $this->fabricante;
     }
-    public function addCaracteristica($nome, $valor) {
-        $this->caracteristicas[] = new Caracteristica($nome, $valor);
+
+    /**
+     * @param mixed $fabricante
+     */
+    public function setFabricante($fabricante): void
+    {
+        $this->fabricante = $fabricante;
     }
 
     /**
@@ -46,5 +88,13 @@ class Produto {
     public function getCaracteristicas()
     {
         return $this->caracteristicas;
+    }
+
+    /**
+     * @param mixed $caracteristicas
+     */
+    public function setCaracteristicas($caracteristicas): void
+    {
+        $this->caracteristicas = $caracteristicas;
     }
 }
