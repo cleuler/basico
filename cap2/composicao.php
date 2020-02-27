@@ -7,7 +7,6 @@ include_once  __ROOT__.'/cap1/newline.php';
 
 // criação de um objeto e armazenamento dele na variável: '$p1'
 $p1 = new Produto('Chocolate', 10, 7);
-
 // composição
 $p1->addCaracteristica('Cor', 'Branco');
 $p1->addCaracteristica('Peso', '2.6 Kg');
