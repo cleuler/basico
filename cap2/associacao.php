@@ -1,6 +1,7 @@
 <?php
 // require_once 'classes/InterfaceOrcavel.php';
 define('__ROOT__', dirname(dirname(__FILE__)));
+require_once __ROOT__.'/classes/InterfaceOrcavel.php';
 require_once __ROOT__.'/classes/Fabricante.php';
 require_once  __ROOT__.'/classes/Produto.php';
 include_once  __ROOT__.'/cap1/newline.php';
