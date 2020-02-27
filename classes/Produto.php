@@ -1,20 +1,44 @@
 <?php
-class Produto {
+
+class Produto
+{
     private $descricao;
     private $estoque;
     private $preco;
     private $fabricante;
     private $caracteristicas;
 
+    public function aumentarEstoque($unidades)
+    {
+        if (is_numeric($unidades) AND $unidades >= 0) {
+            $this->estoque += $unidades;
+        }
+    }
+
+    public function diminuirEstoque($unidades)
+    {
+        if (is_numeric($unidades) AND $unidades >= 0) {
+            $this->estoque -= $unidades;
+        }
+    }
+
+    public function reajustarPreco($percentual)
+    {
+        if (is_numeric($percentual) AND $percentual >= 0) {
+            $this->preco *= (1 + ($percentual/100));
+        }
+    }
+
     public function __construct($descricao, $estoque, $preco)
     {
         $this->descricao = $descricao;
-        $this->estoque   = $estoque;
-        $this->preco     = $preco;
+        $this->estoque = $estoque;
+        $this->preco = $preco;
     }
 
 
-    public function addCaracteristica($nome, $valor) {
+    public function addCaracteristica($nome, $valor)
+    {
         $this->caracteristicas[] = new Caracteristica($nome, $valor);
     }
 
