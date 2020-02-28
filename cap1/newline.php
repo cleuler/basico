@@ -9,8 +9,9 @@
  *         Só executa a ação de pular n linhas no display.
  */
 
-function nl($n = 1): void {      // para pular n linhas na saída (web display)
-    for ($i = 1; $i <= $n; $i++){
+function nl($n = 1): void
+{   // para pular n linhas na saída (web display)
+    for ($i = 1; $i <= $n; $i++) {
         echo PHP_EOL;
     }
     return;
