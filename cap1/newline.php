@@ -11,7 +11,7 @@
 
 function nl($n = 1): void {      // para pular n linhas na saída (web display)
     for ($i = 1; $i <= $n; $i++){
-        echo '<br>';
+        echo PHP_EOL;
     }
     return;
 }
